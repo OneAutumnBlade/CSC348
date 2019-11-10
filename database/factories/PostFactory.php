@@ -7,6 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Post::class, function (Faker $faker) {
     return [
-        'post_body' => $faker->realText(),
+        'post_body' =>$faker->realText(),
+        'user_id' =>App\User::inRandomOrder()->first()->id,
     ];
 });

@@ -13,6 +13,7 @@ class PostTableSeeder extends Seeder
     {
         $post1 = new Post;
         $post1->post_body = "I am Bob Bobbinton the Fourth, fear my rein. Muhahahaha.";
+        $post1->user_id = 1;
         $post1->save();
 
         factory(App\Post::class, 50)->create();
