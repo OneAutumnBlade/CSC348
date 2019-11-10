@@ -11,6 +11,10 @@ class PostTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $post1 = new Post;
+        $post1->post_body = "I am Bob Bobbinton the Fourth, fear my rein. Muhahahaha.";
+        $post1->save();
+
+        factory(App\Post::class, 50)->create();
     }
 }
