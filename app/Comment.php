@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    public function user()
+    public function profile()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\Profile');
     }
 
     public function post()

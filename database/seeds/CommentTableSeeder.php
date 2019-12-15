@@ -14,7 +14,7 @@ class CommentTableSeeder extends Seeder
     {
         $comment1 = new Comment;
         $comment1->comment_body = "P.S. My rein will involve brimstone";
-        $comment1->user_id = 1;
+        $comment1->profile_id = 1;
         $comment1->post_id = 1;
         $comment1->save();
 
