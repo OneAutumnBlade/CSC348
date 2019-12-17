@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Profile;
 class ProfileTableSeeder extends Seeder
 {
     /**
@@ -11,10 +11,11 @@ class ProfileTableSeeder extends Seeder
      */
     public function run()
     {
-        $profile1 = new App\Profile;
+        $profile1 = new Profile;
         $profile1->name = 'Bob Bobbington';
-        $profile1->data_of_birth = '1998-10-09';
+        $profile1->date_of_birth = '1998-10-09';
         $profile1->user_id = 1;
+        $profile1->save();
         
         factory(App\Profile::class, 10)->create();
 

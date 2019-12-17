@@ -9,5 +9,7 @@ $factory->define(Post::class, function (Faker $faker) {
     return [
         'post_body' =>$faker->realText(),
         'profile_id' =>App\Profile::inRandomOrder()->first()->id,
+
+        
     ];
 });

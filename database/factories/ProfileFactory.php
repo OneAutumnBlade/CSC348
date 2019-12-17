@@ -9,6 +9,6 @@ $factory->define(Profile::class, function (Faker $faker) {
     return [
         'name' =>$faker->name(),
         'date_of_birth' =>$faker->date(),
-        'user_id' =>App\User::inRandomOrder()->first()->id,
+        'user_id' => $faker->unique()->numberBetween(2, App\User::count()),
     ];
 });
