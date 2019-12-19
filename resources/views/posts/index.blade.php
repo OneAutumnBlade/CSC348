@@ -5,7 +5,10 @@
 
     <ul>
         @foreach ($posts as $post)
-            <li>{{$post->post_body}}</li>
+            <div>
+                <a href="{{route('posts.show',['id' => $post->id])}}">{{$post->post_body}}</a>
+                <br>Posted by {{App\Profile::find($post->profile_id)->name}}
+            </div>
         @endforeach
     </ul>
 
