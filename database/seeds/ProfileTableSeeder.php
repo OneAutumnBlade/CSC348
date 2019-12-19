@@ -13,7 +13,6 @@ class ProfileTableSeeder extends Seeder
     {
         $profile1 = new Profile;
         $profile1->name = 'Bob Bobbington';
-        $profile1->date_of_birth = '1998-10-09';
         $profile1->user_id = 1;
         $profile1->save();
         
