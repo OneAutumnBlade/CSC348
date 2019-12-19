@@ -6,14 +6,10 @@
     <ul>
         @foreach ($posts as $post)
             <div>
-                {{$post->post_body}}
+                <a href="{{route('posts.show',['id' => $post->id])}}">{{$post->post_body}}</a>
                 <br><b>Posted by {{App\Profile::find($post->profile_id)->name}}</b>
                 @foreach ($post->comments as $comment)
                 
-                <div>
-                    {{$comment->comment_body}}
-                    <br><b>Commented by {{App\Profile::find($comment->profile_id)->name}}</b>
-                </div>
                 @endforeach
             </div>
 
